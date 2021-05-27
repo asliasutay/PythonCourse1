@@ -1,0 +1,16 @@
+dict_cv1 = {"Ad":"Aslı" ,"Soyad":"Asutay","Doğum Yeri":"İzmir","Yaş":26,"Üniversite":"DEU"}
+dict_cv2 = {"Ad":"Anıl" ,"Soyad":"Asutay","Doğum Yeri":"İzmir","Yaş":20,"Üniversite":"Bakircay"}
+dict_cv3 = {"Ad":"Can" ,"Soyad":"Yılmaz","Doğum Yeri":"İstanbul","Yaş":30,"Üniversite":"BAU"}
+dict_cv4 = {"Ad":"Selin" ,"Soyad":"Keser","Doğum Yeri":"Çanakkale","Yaş":26,"Üniversite":"DEU"}
+dict_cv5 = {"Ad":"Meliha" ,"Soyad":"Nail","Doğum Yeri":"İzmir","Yaş":24,"Üniversite":"İTU"}
+
+cv_list=[]
+cv_list.append(dict_cv1)
+cv_list.append(dict_cv2)
+cv_list.append(dict_cv3)
+cv_list.append(dict_cv4)
+cv_list.append(dict_cv5)
+
+for i in cv_list:
+    print("Ad: %s , Soyad: %s , Doğum Yeri: %s , Yaş: %d , Üniversite: %s" % (
+        i["Ad"], i["Soyad"], i["Doğum Yeri"] , i["Yaş"], i["Üniversite"] ))
