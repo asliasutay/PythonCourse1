@@ -1,0 +1,40 @@
+keys = ["midterm", "project", "final", "passingGrade"]
+grades = list()
+student_list = list()
+
+s1 = dict.fromkeys(keys)
+s2 = dict.fromkeys(keys)
+s3 = dict.fromkeys(keys)
+s4 = dict.fromkeys(keys)
+s5 = dict.fromkeys(keys)
+
+def filldict(name):
+    midterm = int(input("Midterm grade is:"))
+    project = int(input("Project grade is:"))
+    final = int(input("Final grade is:"))
+    passingGrade = midterm * (0.3) + project * (0.3) + final * (0.4) 
+    name[keys[0]]=midterm
+    name[keys[1]]=project
+    name[keys[2]]=final
+    name[keys[3]]=passingGrade
+
+filldict(s1)
+filldict(s2)
+filldict(s3)
+filldict(s4)
+filldict(s5)
+
+student_list.append(s1)
+student_list.append(s2)
+student_list.append(s3)
+student_list.append(s4)
+student_list.append(s5)
+
+for k in student_list:
+     grades.append(k["passingGrade"])
+
+min_in = grades.index(min(grades))
+max_in = grades.index(max(grades))
+
+grades[0], grades[max_in] = grades[max_in], grades[0]
+grades[4], grades[min_in] = grades[min_in], grades[4]
